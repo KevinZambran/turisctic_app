@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* menu */
+}
+* header {
+  width: 100%;
+}
+* header .img {
+  height: 100px;
+  overflow: hidden;
+}
+* header .img .imglarga {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+* header .menunav {
+  background-color: #424874;
+  border-bottom: 1px solid #000;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0 5px;
+}
+* header .menunav .menu {
+  list-style: none;
+  margin: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+* header .menunav .menu li {
+  display: inline-block;
+  position: relative;
+}
+* header .menunav .menu li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+* header .menunav .menu li a:hover {
+  color: black;
+}
+* header .menunav .menu .submenulist {
+  position: relative;
+}
+* header .menunav .menu .submenulist .submenu {
+  display: none;
+  position: absolute;
+  background-color: #343a69;
+  min-width: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: start;
+  padding: 10px 10px;
+}
+* header .menunav .menu .submenulist .submenu li {
+  width: 150px;
+  border: 1px solid #424874;
+  font-size: 12px;
+  margin: 5px;
+  color: #000;
+}
+* header .menunav .menu .submenulist:hover .submenu {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+}
+* header .menunav .menu .submenulist:hover .submenu li:hover {
+  background: #424874;
+}
+* header .menunav .menu .submenulist:hover .submenu li a {
+  color: #fff;
+}
+* header .menunav .logout {
+  height: 80%;
+  margin-top: 4px;
+  padding: 10px;
+  text-decoration: none;
+  color: red;
+}
+* header .menunav .logout:hover {
+  color: #fff;
+}
+* .video {
+  background: #424874;
+}
+* .contenido {
+  display: flex;
+  flex-wrap: wrap;
+}
+* .contenido main {
+  width: 100%;
+  flex: 2;
+  padding: 10px;
+  /* article */
+}
+* .contenido main article .title {
+  font-size: 35px;
+  padding: 20px;
+  color: #A6B1E1;
+}
+* .contenido main article .imgarticle {
+  width: 100%;
+  border-radius: 10px;
+}
+* .contenido main article .parrafo {
+  text-align: justify;
+  font-size: larger;
+}
+* .contenido main .title {
+  font-size: 25px;
+  padding: 20px;
+  color: #A6B1E1;
+}
+* .contenido main .tabla {
+  padding: 30px;
+}
+* .contenido main .tabla .tabl {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 1em;
+  font-family: sans-serif;
+  min-width: 450px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+* .contenido main .tabla .tabl thead tr {
+  color: #ffffff;
+  text-align: middle;
+}
+* .contenido main .tabla .tabl thead tr th {
+  padding: 12px 15px;
+  background-color: #424874;
+}
+* .contenido main .tabla .tabl tbody tr {
+  color: #000000;
+  text-align: middle;
+  border-bottom: 1px solid #dddddd;
+}
+* .contenido main .tabla .tabl tbody tr td {
+  padding: 12px 15px;
+}
+* .contenido main .tabla .tabl tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+* .contenido main .tabla .tabl tbody tr:last-of-type {
+  border-bottom: 2px solid #A6B1E1;
+}
+* .contenido aside {
+  width: 100%;
+  flex: 1;
+  padding: 10px;
+}
+* .contenido aside .title {
+  font-size: 25px;
+  padding: 20px;
+  color: #A6B1E1;
+}
+* .contenido aside .link-aside {
+  text-decoration: none;
+}
+* .contenido aside .link-aside .img-aside {
+  width: 200px;
+  height: 100px;
+}
+* .contenido aside .form {
+  background: rgba(39, 97, 233, 0.3137254902);
+  width: 500px;
+  padding: 30px;
+  border-radius: 10px;
+}
+* .contenido aside .form h3 {
+  text-align: center;
+}
+* .contenido aside .form legend {
+  font-size: 20px;
+  font-weight: bold;
+}
+* .contenido aside .form .btncss {
+  width: 100%;
+  padding: 10px;
+  background-color: #424874;
+  color: #fff;
+}
+* footer .subir {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  font-size: 25px;
+  text-decoration: none;
+  background-color: #A6B1E1;
+}
+* footer .siguenos {
+  background: #424874;
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+}
+* footer .siguenos .twitter {
+  width: 40px;
+  padding-bottom: 10px;
+}
+* footer .siguenos .facebook {
+  width: 40px;
+  padding-bottom: 10px;
+}
+* footer .siguenos .youtube {
+  width: 40px;
+  padding-bottom: 10px;
+}
+* footer .siguenos hr {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+* footer .siguenos .copy {
+  font-size: 10px;
+}
+@media (max-width: 768px) {
+  * .container {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=home.css.map */
