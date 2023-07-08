@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8 iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Touristic Place</title>
+    <link rel="shortcut icon" href="img/LogoEcu.png" type="image/x-icon">
+    <link rel="stylesheet" href="sass/home/home.css">
+    <!-- <link rel="stylesheet" href="css/styleoriginal.css"> -->
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="contenedor">
+        <header>
+            <div class="img">
+                <img class="imglarga" src="img/fondo.webp" alt="Letras">
+            </div>
+            <nav class="menunav d-flex justify-content-between">
+                <ul class="menu">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="https://www.ecuador-turistico.com/search/label/Playas">Playas</a></li>
+                    <li class="submenulist"><a href="">Ciudades</a>
+                        <ul class="submenu">
+                            <li><a
+                                    href="https://www.ecuador-turistico.com/search/label/Turismo%20en%20Guayaquil">Guayaquil</a>
+                            </li>
+                            <li><a href="https://www.ecuador-turistico.com/search/label/Quito">Quito</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/search/label/Cuenca">Cuenca</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenulist"><a href="https://www.ecuador-turistico.com/search/label/Hoteles">Hoteles</a>
+                        <ul class="submenu">
+                            <li><a href="https://www.ecuador-turistico.com/2018/08/hotel-pacifico-centro.html">Hotel
+                                    Paficico</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2018/08/playa-suites-manta.html">Hotel Playa
+                                    Suite Manta</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2018/08/mantahost-hotel.html">Hotel
+                                    Mantahost</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2018/07/hostal-piazzola.html">Hotel
+                                    Piazzola</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2018/04/hostal-mar-y-tierra.html">Hotel Mar y
+                                    Tierra</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2018/04/cabanas-miramar.html">Hotel Cabañas
+                                    Miramar</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2018/03/hostal-sky.html">Hotel Sky</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2018/03/hostal-los-mantas.html">Hotel Los
+                                    Mantas</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2018/03/hotel-pacifico-tarqui.html">Hotel
+                                    Paficico Tarqui</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2018/03/hotel-manta-airport.html">Hotel Manta
+                                    Airport</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2013/05/hoteles-en-cuenca-ecuador.html">Hotel
+                                    Cuenca Ecuador</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2013/05/hotel-playas.html">Hotel Playas</a>
+                            </li>
+                            <li><a href="https://www.ecuador-turistico.com/2013/04/hoteles-en-las-penas-ecuador.html">Hotel
+                                    Peñas Ecuador</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2013/03/hoteles-en-ambato-ecuador.html">Hotel
+                                    Ambato Ecuador</a></li>
+                            <li><a href="https://www.ecuador-turistico.com/2013/03/hoteles-en-las-islas-galapagos.html">Hotel
+                                    Islas Galapagos</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.ecuador-turistico.com/p/las-islas-galapagos.html">Islas Galapagos</a></li>
+                    {{#if rol}}
+                    <li><a href="/ViewUsuarios">Ver Usuarios</a></li>
+                    {{/if}}
+                </ul>
+                <ul class="logout navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{name}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/updateuser" type="submit">Actualizar datos</a></li>
+                            <li><a class="dropdown-item" href="/delete/{{id}}">Eliminar cuenta</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="/logout">Cerrar sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                {{!-- <a href="/logout" class="logout">Cerrar Sesion</a> --}}
+            </nav>
+        </header>
+    </div>
+
+    <div class="container p-3">
+        <h3 class="p-3 text-center">Usuarios Registrados</h3>
+        <div class="container p-3">
+            <a href="/registro" ><button type="button" class="btn btn-success">Crear Usuario</button></a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Aciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each users}}
+                <tr>
+                    <th scope="row">{{id}}</th>
+                    <td>{{username}}</td>
+                    <td>{{email}}</td>
+                    <td>{{rol}}</td>
+                    <td>
+                        <div class="container d-flex  justify-content-evenly">
+                            <form action="/updateuseradmin" method="POST">
+                                <input type="hidden" name="id" value="{{id}}">
+                                <button type="submit" class="btn btn-primary">Editar</button>
+                            </form>
+                             <form action="/delete" method="POST">
+                                <input type="hidden" name="id" value="{{id}}">
+                                <button type="submit" class="btn btn-danger">Eliminar</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <a class="subir" onclick="scrollToTop()" href="#">Subir</a>
+        <div class="siguenos">
+            <h4 class="p-3">Siguenos</h4>
+            <div class="imgsiguenos">
+                <a href="https://www.facebook.com/miecuadorturistico"><img class="facebook" src="img/facebook.png"
+                        alt="facebook"></a>
+                <a href="https://www.twitter.com/ecuadorturistic"><img class="twitter" src="img/twitter.png"
+                        alt="twitter"></a>
+                <a href="https://www.youtube.com/channel/UCHVb-3CI7cMVivuW8Kenkxg/?sub_confirmation=1"><img
+                        class="youtube" src="img/youtube.png" alt="youtube"></a>
+            </div>
+            <hr>
+
+            <div class="copy">
+                Copyright © 2023 Turistic Place - Ecuador by Kevin Zambrano M.
+                <br>
+                Created by Lionel Zambrano
+            </div>
+        </div>
+
+    </footer>
+</body>
+<script src="js/script.js"></script>
+
+</html>

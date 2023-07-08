@@ -69,16 +69,27 @@
                         </ul>
                     </li>
                     <li><a href="https://www.ecuador-turistico.com/p/las-islas-galapagos.html">Islas Galapagos</a></li>
+                    {{#if rol}}
+                        <li><a href="/ViewUsuarios">Ver Usuarios</a></li>
+                    {{/if}}
                 </ul>
                 <ul class="logout navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
-                            Kevin Zambrano
+                            {{name}}
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/updateuser" type="submit">Actualizar datos</a></li>
-                            <li><a class="dropdown-item" href="/delete/{{id}}">Eliminar cuenta</a></li>
+                            <li>
+                                <a class="dropdown-item" href="">
+                                    <form action="/delete" method="POST">
+                                        <input type="hidden" name="id" value="{{id}}">
+                                        <button type="submit" class="">Eliminar cuenta</button>
+                                    </form>
+                                </a>
+                            </li>
+                            
                             <li>
                                 <hr class="dropdown-divider">
                             </li>

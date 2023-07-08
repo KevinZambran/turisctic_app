@@ -13,8 +13,13 @@
     <div class="container">
         <div class="form">
             <form action="/usuarios/{{id}}" class="register-form" method="post">
+                <input type="text" name="username" placeholder="Username" value="{{username}}">
                 <input type="email" name="email" placeholder="Email" value="{{email}}" readonly>
-                <input type="password" name="password" placeholder="Actual Password">
+                {{#if role}}
+                
+                {{else}}
+                    <input type="password" name="password" placeholder="Actual Password">
+                {{/if}}
                 <input type="password" name="password1" placeholder="Nuevo password" >
                 <button type="submit" class="btn">Actualizar</button>
             </form>

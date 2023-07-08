@@ -13,7 +13,8 @@
     "express-session": "^1.17.3",
     "hbs": "^4.2.0",
     "mongodb": "^5.7.0",
-    "mongoose": "^7.3.2"
+    "mongoose": "^7.3.2",
+    "pg": "^8.11.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
