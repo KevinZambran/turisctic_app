@@ -24,7 +24,7 @@
             </div>
             <nav class="menunav d-flex justify-content-between">
                 <ul class="menu">
-                    <li><a href="">Inicio</a></li>
+                    <li><a href="/home">Inicio</a></li>
                     <li><a href="https://www.ecuador-turistico.com/search/label/Playas">Playas</a></li>
                     <li class="submenulist"><a href="">Ciudades</a>
                         <ul class="submenu">
@@ -82,18 +82,19 @@
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/updateuser" type="submit">Actualizar datos</a></li>
                             <li>
-                                <a class="dropdown-item" href="">
-                                    <form action="/delete" method="POST">
-                                        <input type="hidden" name="id" value="{{id}}">
-                                        <button type="submit" class="">Eliminar cuenta</button>
-                                    </form>
-                                </a>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li class="mx-3">
+                                <form action="/delete" method="POST">
+                                    <input type="hidden" name="id" value="{{id}}">
+                                    <button type="submit" class="btn">Eliminar cuenta</button>
+                                </form>
                             </li>
                             
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="/logout">Cerrar sesion</a></li>
+                            <li><a class="dropdown-item btn-cerrar" href="/logout">Cerrar sesion</a></li>
                         </ul>
                     </li>
                 </ul>

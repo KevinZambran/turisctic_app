@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 body {
   font-family: "Roboto", sans-serif;
-  background: #D7CCC8;
+  background: linear-gradient(to top, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .container {
@@ -19,6 +19,9 @@ body {
   background: #FFFFFF;
 }
 
+.form .title {
+  text-align: center;
+}
 .form input {
   font-family: "Roboto", sans-serif;
   width: 100%;
@@ -44,7 +47,7 @@ body {
   border: 0;
   width: 100%;
   padding: 15px;
-  background: #FF5722;
+  background: #00467F;
   color: #FAFAFA;
   text-transform: uppercase;
 }

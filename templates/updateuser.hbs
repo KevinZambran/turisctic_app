@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update</title>
+    <link rel="shortcut icon" href="img/LogoEcu.png" type="image/x-icon">
+    <title>Actualizar</title>
     <link rel="stylesheet" href="sass\signup\signup.css">
 </head>
 
@@ -13,14 +14,14 @@
     <div class="container">
         <div class="form">
             <form action="/usuarios/{{id}}" class="register-form" method="post">
-                <input type="text" name="username" placeholder="Username" value="{{username}}">
-                <input type="email" name="email" placeholder="Email" value="{{email}}" readonly>
+                <input type="text" name="username" placeholder="Username" value="{{username}}" required>
+                <input type="email" name="email" placeholder="Email" value="{{email}}" readonly required>
                 {{#if role}}
                 
                 {{else}}
                     <input type="password" name="password" placeholder="Actual Password">
                 {{/if}}
-                <input type="password" name="password1" placeholder="Nuevo password" >
+                <input type="password" name="password1" placeholder="Nuevo password" required>
                 <button type="submit" class="btn">Actualizar</button>
             </form>
         </div>

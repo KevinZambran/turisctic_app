@@ -10,7 +10,7 @@ $font-family: 'Roboto', sans-serif;
   border: 0;
   width: 100%;
   padding: 15px;
-  background: #FF5722;
+  background: #00467F;
   color: $fontcolor;
   text-transform: uppercase;
 }
@@ -37,7 +37,8 @@ $font-family: 'Roboto', sans-serif;
 
 body{
   font-family: $font-family;
-  background: $background-color;
+  background: linear-gradient(to top, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
@@ -57,6 +58,10 @@ body{
 }
 
 .form {
+  .title{
+    text-align: center;
+  }
+
   input{
     @include input; 
     

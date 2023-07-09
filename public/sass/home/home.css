@@ -78,10 +78,20 @@
   margin-top: 4px;
   padding: 10px;
   text-decoration: none;
-  color: red;
+  color: #fff;
 }
 * header .menunav .logout:hover {
+  color: red;
+}
+* header .menunav .btn-cerrar {
+  padding: 10px;
+  text-decoration: none;
   color: #fff;
+  background: rgb(183, 51, 51);
+}
+* header .menunav .btn-cerrar:hover {
+  color: #fff;
+  background: rgb(151, 2, 2);
 }
 * .video {
   background: #424874;

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/LogoEcu.png" type="image/x-icon">
     <title>Registrarse</title>
     <link rel="stylesheet" href="sass\signup\signup.css">
 </head>
@@ -12,10 +13,11 @@
 
     <div class="container">
         <div class="form">
+            <h1 class="title">Sign Up</h1>
             <form action="/signup" class="register-form" method="post">
-                <input type="text" name="username" placeholder="Username">
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Password">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
                 <button type="submit" class="btn">Registrar</button>
                 <p class="message">Ya estas registrado? <a href="/login">Inicia Sesion</a></p>
             </form>
